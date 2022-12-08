@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>GanonDorf</title>
+        <link rel="stylesheet" href="estilomokepon.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="titulex">
+        <h1 id="titulo"> GanonDorf </h1>
+        </div>
+
+
+        <section id="seleccionar-mascota">
+            <h2>Elige a tu Personaje:</h2>
+
+        <div id="contenedorTarjetas"class="tarjetas">
+        </div>
+            <button id="boton-mascota">Seleccionar</button>
+        </section>
+
+        <section id="ver-mapa">
+            <h2 class="subtitulo">Recorre el mapa con tu Bestia</h2>
+            <canvas id="mapa"></canvas>
+            <div class="botones-movimiento">
+                <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()" class="botonMover botonArriba">⬆️</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()" class="botonMover botonIzquierda">⬅️</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()" class="botonMover botonAbajo">⬇️</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()" class="botonMover botonDerecha">➡️</button>
+            </div>
+        </section>
+
+        <section id="seleccionar-ataque">
+            <h2>Elige tu ataque:</h2>
+        
+            <div id="contenedorAtaques" class="tarjetas-ataques"></div>
+
+            <section id="mensajes">
+                <p id="resultado">Suerte Domador!</p>
+            </section>
+
+
+        <div class="vidas">
+            <div class="vida-jugador">
+                <p id="vidas-jugador">0</p> 
+                <p id="mascota-jugador"></p>
+                <div id="ataques-del-jugador"></div>
+            </div>
+            <div class="vida-enemigo">
+                <p id="vidas-enemigo">0</p> 
+                <p id="mascota-enemigo"></p>
+                <div id="ataques-del-enemigo"></div>
+            </div>
+        </div>
+            
+            
+        </section>
+
+        <section id="reiniciar">
+            <button id="boton-reiniciar">Reiniciar</button>
+        </section>
+
+        <script src="codigo.js"></script>
+    </body>
+</html>

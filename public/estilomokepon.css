@@ -1,0 +1,333 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Cinzel', serif;
+}
+
+body{
+    background-image: url(./fondo5.jpg);
+    background-size:cover;
+}
+
+input{
+    display: none;
+}
+
+.titulex{
+    display: flex;
+    justify-content: center;
+}
+
+#titulo {
+    color:#000;
+    font-size: 10em;
+}
+
+.tarjetas, .tarjetas-ataques{
+    display: flex;
+    gap: 10px;
+}
+
+.tarjeta-de-mokepon{
+    width:250px;
+    height: 360px;
+    background-color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 3px solid #000;
+    color: #000;
+    font-size: 1.5em;
+    border-radius: 4%;
+}
+
+.tarjeta-de-mokepon:hover{
+    border: 3px solid#a00;
+    cursor: pointer;
+}
+
+
+input:checked+.tarjeta-de-mokepon{
+    border: 3px solid#a00;
+}
+
+
+
+.kinuq{
+    width:236px;
+    height: 312px;
+}
+
+
+#seleccionar-mascota{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: #eee;
+    
+
+}
+
+#seleccionar-mascota label{
+    padding: 8px 2px;
+}
+
+#boton-mascota{
+    margin: 12px;
+    padding: 12px;
+    background-color: #999;
+    border-color: #000;
+    color:#000;
+    border-radius: 10%;
+    font-size: 1.5em;
+}
+
+#boton-mascota:hover{
+    border: 3px solid #fff;
+    cursor: pointer;
+}
+
+#seleccionar-mascota h2{
+    padding: 6px 2px;
+    margin:20px;
+    font-size: 2em;
+    text-decoration: underline;
+
+}
+
+#seleccionar-mascota label{
+    font-size: 1.5em;
+    margin: 10px;
+}
+
+#seleccionar-ataque{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: #eee;
+}
+
+#seleccionar-ataque h2{
+    padding: 6px 2px;
+    margin:10px;
+    font-size: 2em;
+    text-decoration: underline;
+}
+
+#seleccionar-ataque p{
+    font-size: 1.2em;
+    padding: 8px 2px;
+}
+
+#seleccionar-ataque button{
+    padding: 15px 30px;
+    background-color:#999;
+    border-color: #000;
+    color:#000;
+    margin-bottom: 10px;
+    border-radius: 10%;
+    font-size: 1.3em;
+}
+
+#seleccionar-ataque button:hover{
+    border: 3px solid #fff;
+    cursor: pointer;
+}
+
+.vidas{
+    display: flex;
+    margin: 10px;
+}
+
+.vida-jugador{
+    border: 3px solid #000;
+    margin: 10px;
+    width: 250px;
+    border-radius: 5%;
+    background-color: #999;
+    color:#000;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.vida-enemigo{
+    border: 3px solid #000;
+    margin: 10px;
+    width: 250px;
+    border-radius: 5%;
+    background-color: #999;
+    color:#000;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.vidas #mascota-jugador{
+    font-size: 2em;
+    padding: 0;
+}
+
+.vidas #mascota-enemigo{
+    font-size: 2em;
+    padding: 0;
+}
+
+.vidas #vidas-jugador{
+    font-size: 5em;
+    width: 84px;
+    height: 96px;
+    color: #090;
+}
+
+.vidas #vidas-enemigo{
+    font-size: 5em;
+    width: 84px;
+    height: 96px;
+    color: #900;
+}
+
+#mensajes {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 1.5em;
+    color:#eee;
+    border: 3px solid #000;
+    width: 400px;
+    margin: auto;
+    border-radius: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+
+#reiniciar{
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#boton-reiniciar{
+    padding: 15px 30px;
+    background-color: #999;
+    border-color: #000;
+    color:#000;
+    margin: 10px;
+    border-radius: 10%;
+    font-size: 1.3em;
+}
+
+#boton-reiniciar:hover{
+    border: 3px solid #fff;
+    cursor: pointer;
+}
+
+#ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.botonMover{
+    background-color:#999;
+    border-radius: 10%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.botones-movimiento{
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.botonArriba{
+    display: block;
+    margin: auto;
+}
+
+
+
+
+
+@media (max-width:1080px){
+    #titulo{
+        font-size: 8em;
+    }
+}
+
+@media (max-width:720px){
+    .tarjetas, .tarjetas-ataques{
+        flex-direction: column;
+    }
+    #titulo{
+        font-size: 5.5em;
+    }
+    .vida-enemigo{
+        width: 230px;
+    }
+    .vida-jugador{
+        width: 230px;
+    }
+}
+
+
+
+@media (max-width:460px){
+    .tarjetas, .tarjetas-ataques{
+        flex-direction: column;
+    }
+
+    #titulo{
+        font-size: 3.5em;
+    }
+
+    #seleccionar-mascota h2{
+        font-size: 1.8em;
+    }
+
+    #seleccionar-ataque h2{
+        font-size: 1.8em;
+    }
+
+    .vida-jugador{
+        width: 150px;
+    }
+    
+    .vida-enemigo{
+        width: 150px;
+    }
+
+    .vidas #mascota-jugador{
+        font-size: 1.8em;
+    }
+    
+    .vidas #mascota-enemigo{
+        font-size: 1.8em;
+    }
+    
+    .vidas #vidas-jugador{
+        font-size: 5em;
+    }
+    
+    .vidas #vidas-enemigo{
+        font-size: 5em;
+    }
+
+
+    #mensajes{
+        font-size: 1.2em;
+        width: 300px;
+    }
+}
